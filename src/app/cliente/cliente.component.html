@@ -1,0 +1,28 @@
+<app-sidebar></app-sidebar>
+<p-card header="Cliente">
+    <p class="m-0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam doloribus aliquid tempore consectetur rem accusantium, cum delectus cupiditate repudiandae corporis aliquam excepturi sint quia porro natus distinctio expedita quam provident.
+    </p>
+</p-card>
+<div class="mt-4">
+<p-card header="Lista de Clientes">
+    <p-table [value]="clients" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-card>
+</div>
